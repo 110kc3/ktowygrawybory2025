@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5938409029165277"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kto wygra wybory 2025?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f2f2f2;
+      padding: 2rem;
+    }
+    canvas {
+      margin: 2rem auto;
+      display: block;
+    }
+    button {
+      background: #e60000;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #cc0000;
+    }
+  </style>
+
+  <!-- Wheel lib -->
+  <script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/winwheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+<body>
+  <h1>Kto wygra wybory prezydenckie 2025?</h1>
+
+  <canvas id="wheelCanvas" width="500" height="500"></canvas>
+  <button onclick="spin()">Kliknij, aby wylosować zwycięzcę</button>
+
+  <h2 id="winner" style="margin-top:2rem;"></h2>
+
+    <!--  -->
+
+  <script>
+    const candidates = [
+      "<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kto wygra wybory 2025?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f2f2f2;
+      padding: 2rem;
+    }
+    canvas {
+      margin: 2rem auto;
+      display: block;
+    }
+    button {
+      background: #e60000;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #cc0000;
+    }
+  </style>
+
+  <!-- Wheel lib -->
+  <script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/winwheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+  <!-- AdSense (replace ca-pub-XXXXXX with your own once approved) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Kto wygra wybory prezydenckie 2025?</h1>
+
+  <canvas id="wheelCanvas" width="500" height="500"></canvas>
+  <button onclick="spin()">Kliknij, aby wylosować zwycięzcę</button>
+
+  <h2 id="winner" style="margin-top:2rem;"></h2>
+
+  <!-- AdSense ad block (replace data-ad-client/data-ad-slot with your own) -->
+  <ins class="adsbygoogle"
+       style="display:block; margin-top:2rem"
+       data-ad-client="ca-pub-XXXXXXX"
+       data-ad-slot="YYYYYYY"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <script>
+    const candidates = [
+      "BARTOSZEWICZ Artur",
+      "BIEJAT Magdalena Agnieszka",
+      "BRAUN Grzegorz Michał",
+      "HOŁOWNIA Szymon Franciszek",
+      "JAKUBIAK Marek",
+      "MACIAK Maciej",
+      "MENTZEN Sławomir Jerzy",
+      "NAWROCKI Karol Tadeusz",
+      "SENYSZYN Joanna",
+      "STANOWSKI Krzysztof Jakub",
+      "TRZASKOWSKI Rafał Kazimierz",
+      "WOCH Marek Marian",
+      "ZANDBERG Adrian Tadeusz"
+    ];
+
+    const wheel = new Winwheel({
+      'numSegments': candidates.length,
+      'outerRadius': 220,
+      'textFontSize': 16,
+      'segments': candidates.map(name => ({ 'fillStyle': getRandomColor(), 'text': name })),
+      'animation': {
+        'type': 'spinToStop',
+        'duration': 6,
+        'spins': 10,
+        'callbackFinished': displayWinner
+      }
+    });
+
+    function spin() {
+      document.getElementById("winner").textContent = "";
+      wheel.stopAnimation(false);
+      wheel.rotationAngle = 0;
+      wheel.startAnimation();
+    }
+
+    function displayWinner(indicatedSegment) {
+      document.getElementById("winner").textContent = "Wylosowano: " + indicatedSegment.text;
+    }
+
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
+",
+      "Rafał Trzaskowski",
+      "Szymon Hołownia",
+      "Krzysztof Bosak",
+      "Robert Biedroń",
+      "Władysław Kosiniak-Kamysz",
+      "Zbigniew Ziobro",
+      "Paweł Kukiz",
+      "Ktoś zupełnie inny 🤷‍♂️"
+    ];
+
+    const wheel = new Winwheel({
+      'numSegments': candidates.length,
+      'outerRadius': 220,
+      'textFontSize': 16,
+      'segments': candidates.map(name => ({ 'fillStyle': getRandomColor(), 'text': name })),
+      'animation': {
+        'type': 'spinToStop',
+        'duration': 6,
+        'spins': 10,
+        'callbackFinished': displayWinner
+      }
+    });
+
+    function spin() {
+      document.getElementById("winner").textContent = "";
+      wheel.stopAnimation(false);
+      wheel.rotationAngle = 0;
+      wheel.startAnimation();
+    }
+
+    function displayWinner(indicatedSegment) {
+      document.getElementById("winner").textContent = "Wylosowano: " + indicatedSegment.text;
+    }
+
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
