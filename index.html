@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Kto wygra wybory 2025?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
-      background: #f2f2f2;
+      background: #f0f0f0;
       padding: 2rem;
     }
     canvas {
@@ -16,33 +16,34 @@
       display: block;
     }
     button {
-      background: #e60000;
+      background: #007bff;
       color: white;
-      border: none;
       padding: 1rem 2rem;
       font-size: 1.2rem;
-      border-radius: 10px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
     }
     button:hover {
-      background: #cc0000;
+      background: #0056b3;
     }
   </style>
 
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel@2.7.0/Winwheel.min.js"></script>
+  <!-- Winwheel library -->
+  <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel/Winwheel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 
-  <!-- Optional: Favicon fix -->
+  <!-- Favicon workaround -->
   <link rel="icon" href="data:,">
 </head>
 <body>
   <h1>Kto wygra wybory prezydenckie 2025?</h1>
 
   <canvas id="wheelCanvas" width="500" height="500"></canvas>
-  <button onclick="spin()">Kliknij, aby wylosować zwycięzcę</button>
 
-  <h2 id="winner" style="margin-top:2rem;"></h2>
+  <button onclick="spin()">Losuj</button>
+
+  <h2 id="winner" style="margin-top: 2rem;"></h2>
 
   <script>
     const candidates = [
@@ -71,16 +72,19 @@
     }
 
     const wheel = new Winwheel({
-      'canvasId': 'wheelCanvas',
-      'numSegments': candidates.length,
-      'outerRadius': 220,
-      'textFontSize': 14,
-      'segments': candidates.map(name => ({ 'fillStyle': getRandomColor(), 'text': name })),
-      'animation': {
-        'type': 'spinToStop',
-        'duration': 6,
-        'spins': 10,
-        'callbackFinished': displayWinner
+      canvasId: 'wheelCanvas',
+      numSegments: candidates.length,
+      outerRadius: 220,
+      textFontSize: 14,
+      segments: candidates.map(name => ({
+        fillStyle: getRandomColor(),
+        text: name
+      })),
+      animation: {
+        type: 'spinToStop',
+        duration: 6,
+        spins: 10,
+        callbackFinished: displayWinner
       }
     });
 
@@ -92,7 +96,7 @@
     }
 
     function displayWinner(indicatedSegment) {
-      document.getElementById("winner").textContent = "Wylosowano: " + indicatedSegment.text;
+      document.getElementById("winner").textContent = "Wygra " + indicatedSegment.text;
     }
   </script>
 </body>
